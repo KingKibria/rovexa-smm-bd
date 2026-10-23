@@ -352,6 +352,9 @@
     .lang-opt{border:0;background:transparent;color:var(--muted);font-weight:700;font-size:12.5px;padding:5px 11px;border-radius:999px;line-height:1.2;cursor:pointer}
     .lang-opt.active{background:var(--grad);color:#fff;box-shadow:0 4px 10px rgba(109,84,246,.30)}
     .cur-toggle{display:inline-flex;align-items:center;gap:2px;border:1px solid var(--border);background:var(--card);border-radius:999px;padding:3px;flex:0 0 auto}.cur-opt{border:0;background:transparent;color:var(--muted);font-weight:700;font-size:12.5px;padding:5px 10px;border-radius:999px;line-height:1.2;cursor:pointer}.cur-opt.active{background:var(--grad);color:#fff;box-shadow:0 4px 10px rgba(109,84,246,.30)}
+    .live-badge{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;font-weight:800;letter-spacing:.08em;color:#15803d;background:color-mix(in srgb,var(--success) 18%,var(--card));border:1px solid color-mix(in srgb,var(--success) 45%,var(--border));padding:4px 8px;border-radius:999px;flex:0 0 auto;white-space:nowrap}
+    .live-dot{width:7px;height:7px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 3px rgba(34,197,94,.25);flex:0 0 auto}
+    html[data-theme="dark"] .live-badge{color:#4ade80}
     /* ——— Topbar fit fix: the balance pill keeps its full label on one line at every width; when the control cluster no longer fits, the bar wraps to a second row instead of squeezing the pill ——— */
     .balance-pill{display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;flex:0 0 auto;line-height:1.2}
     .top-link{white-space:nowrap;flex:0 0 auto}
@@ -461,7 +464,7 @@
         <button data-page="affiliates"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2"/><path d="M4 19c0-3 2-5 5-5s5 2 5 5M14 15c3 0 5 1 5 4"/></svg>Affiliates</button>
         <button data-page="updates"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v12M8 11l4 4 4-4M5 20h14"/></svg>Updates</button>
       </nav></aside>
-      <div class="app-content"><header class="topbar"><button class="menu-toggle" id="menuToggle" aria-label="Open menu"><svg width="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button><button class="palette-btn" type="button" data-palette-open aria-label="Quick search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3-3"/></svg><span class="palette-btn-label">Search</span><kbd>Ctrl K</kbd></button><button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button><div class="lang-toggle" role="group" aria-label="Language"><button type="button" class="lang-opt active" data-lang="en">EN</button><button type="button" class="lang-opt" data-lang="bn">বাং</button></div><button class="balance-pill">Balance: $0.00 ▾</button><div class="cur-toggle" role="group" aria-label="Currency" title="1 USD = ৳130"><button type="button" class="cur-opt active" data-cur="USD">USD</button><button type="button" class="cur-opt" data-cur="BDT">BDT</button></div><button class="top-link account-link" data-page="account">Account</button><button class="top-link" type="button" data-open-admin>Admin</button><button class="top-link" id="logoutBtn">Logout</button></header>
+      <div class="app-content"><header class="topbar"><button class="menu-toggle" id="menuToggle" aria-label="Open menu"><svg width="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button><button class="palette-btn" type="button" data-palette-open aria-label="Quick search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3-3"/></svg><span class="palette-btn-label">Search</span><kbd>Ctrl K</kbd></button><button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button><div class="lang-toggle" role="group" aria-label="Language"><button type="button" class="lang-opt active" data-lang="en">EN</button><button type="button" class="lang-opt" data-lang="bn">বাং</button></div><button class="balance-pill">Balance: $0.00 ▾</button><span class="live-badge hidden" id="liveBadge"><span class="live-dot"></span>LIVE</span><div class="cur-toggle" role="group" aria-label="Currency" title="1 USD = ৳130"><button type="button" class="cur-opt active" data-cur="USD">USD</button><button type="button" class="cur-opt" data-cur="BDT">BDT</button></div><button class="top-link account-link" data-page="account">Account</button><button class="top-link" type="button" data-open-admin>Admin</button><button class="top-link" id="logoutBtn">Logout</button></header>
       <main class="main">
         <section class="dash-page active" id="new-order"><div class="page-head"><div><h1>New Order</h1><p>Choose a service and prepare your order.</p></div></div><ol class="stepper" id="orderStepper" aria-label="Order progress"><li class="stepper-step active"><span class="stepper-dot">1</span><span class="stepper-label">Choose Service</span></li><li class="stepper-step"><span class="stepper-dot">2</span><span class="stepper-label">Enter Link</span></li><li class="stepper-step"><span class="stepper-dot">3</span><span class="stepper-label">Quantity</span></li><li class="stepper-step"><span class="stepper-dot">4</span><span class="stepper-label">Review &amp; Place</span></li></ol>
           <div class="stat-grid"><article class="card stat-card"><span class="line-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3"/><path d="M6 20c0-4 2-6 6-6s6 2 6 6"/></svg></span><div><small>Welcome</small><strong>Demo User</strong></div></article><article class="card stat-card"><span class="line-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16v13H4zM8 10h8"/></svg></span><div><small>Spent balance</small><strong>$0.00</strong></div></article><article class="card stat-card"><span class="line-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h14v16H5zM8 8h8M8 12h8"/></svg></span><div><small>Panel orders</small><strong>0</strong></div></article><article class="card stat-card"><span class="line-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M16 12h5"/></svg></span><div><small>Account balance</small><strong>$0.00</strong></div></article></div>
@@ -606,14 +609,15 @@
 
   <div class="modal-backdrop hidden" id="serviceModal" role="dialog" aria-modal="true" aria-labelledby="serviceModalTitle"><form class="modal" id="serviceAdminForm"><div class="modal-head"><h2 id="serviceModalTitle">Add service</h2><button class="icon-btn" id="closeServiceModal" type="button" aria-label="Close">×</button></div><input type="hidden" id="editingServiceId"><div class="modal-grid"><div class="field" style="grid-column:1/-1"><label for="adminServiceName">Service name</label><input class="input" id="adminServiceName" required placeholder="Enter service name"></div><div class="field"><label for="adminServiceCategory">Category</label><select class="input" id="adminServiceCategory"><option>Instagram</option><option>YouTube</option><option>TikTok</option><option>Facebook</option><option>Other</option></select></div><div class="field"><label for="adminServiceProvider">Provider</label><select class="input" id="adminServiceProvider"><option>Provider A</option><option>Provider B</option><option>Provider C</option><option>Provider D</option></select></div><div class="field"><label for="adminServiceRate">Rate per 1,000</label><input class="input" id="adminServiceRate" type="number" min="0" step="0.01" required value="0.80"></div><div class="field"><label for="adminServiceStatus">Status</label><select class="input" id="adminServiceStatus"><option value="active">Active</option><option value="paused">Paused</option></select></div><div class="field"><label for="adminServiceMin">Minimum order</label><input class="input" id="adminServiceMin" type="number" min="1" required value="100"></div><div class="field"><label for="adminServiceMax">Maximum order</label><input class="input" id="adminServiceMax" type="number" min="1" required value="100000"></div></div><div class="modal-actions"><button class="btn btn-outline" id="cancelServiceModal" type="button">Cancel</button><button class="btn btn-primary" type="submit">Save service</button></div><p class="demo-note">Saved only in this preview session.</p></form></div>
   <div class="modal-backdrop hidden" id="orderModal" role="dialog" aria-modal="true" aria-labelledby="orderModalTitle"><div class="modal"><div class="modal-head"><h2 id="orderModalTitle">Order Details</h2><button class="icon-btn" type="button" data-close-order aria-label="Close">×</button></div><div class="od-top"><div style="min-width:0"><div class="service-name" id="odService"></div><div class="muted" id="odLink" style="font-size:13px"></div></div><span class="badge info" id="odStatus"></span></div><div class="op-track big"><div class="op-fill st-progress" id="odFill" style="width:0%"></div></div><div class="od-pct-row"><span class="muted">Progress</span><b id="odPct">0%</b></div><div class="detail-stats"><div class="dstat"><span>Start Count</span><b id="odStart">0</b></div><div class="dstat"><span>Current Count</span><b id="odCurrent">0</b></div><div class="dstat"><span>Remains</span><b id="odRemains">0</b></div><div class="dstat"><span>Quantity</span><b id="odQty">0</b></div></div><div class="modal-actions"><button class="btn btn-outline" type="button" data-close-order>Close</button><button class="btn btn-primary hidden" type="button" id="odRefill">Refill</button></div></div></div>
-  <div class="modal-backdrop hidden" id="refillModal" role="dialog" aria-modal="true" aria-labelledby="refillModalTitle"><div class="modal"><div class="modal-head"><h2 id="refillModalTitle">Confirm Refill</h2><button class="icon-btn" type="button" data-close-refill aria-label="Close">×</button></div><p id="refillText" style="margin:0 0 6px"></p><p class="muted" style="margin:0">The provider will re-run the undelivered part of this order. Demo preview — no real refill is sent.</p><div class="modal-actions"><button class="btn btn-outline" type="button" data-close-refill>Cancel</button><button class="btn btn-primary" type="button" id="confirmRefill">Request Refill</button></div></div></div>
+  <div class="modal-backdrop hidden" id="refillModal" role="dialog" aria-modal="true" aria-labelledby="refillModalTitle"><div class="modal"><div class="modal-head"><h2 id="refillModalTitle">Confirm Refill</h2><button class="icon-btn" type="button" data-close-refill aria-label="Close">×</button></div><p id="refillText" style="margin:0 0 6px"></p><p class="muted" style="margin:0" id="refillNote">The provider will re-run the undelivered part of this order. Demo preview — no real refill is sent.</p><div class="modal-actions"><button class="btn btn-outline" type="button" data-close-refill>Cancel</button><button class="btn btn-primary" type="button" id="confirmRefill">Request Refill</button></div></div></div>
+  <div class="modal-backdrop hidden" id="liveOrderModal" role="dialog" aria-modal="true" aria-labelledby="liveOrderModalTitle"><div class="modal"><div class="modal-head"><h2 id="liveOrderModalTitle">Confirm Order</h2><button class="icon-btn" type="button" data-close-liveorder aria-label="Close">×</button></div><div class="notice" style="margin-bottom:16px"><b>This is a REAL order — your actual balance will be charged.</b></div><div class="detail-list"><div class="detail-row"><span>Service</span><b id="loService" style="overflow-wrap:anywhere;text-align:right"></b></div><div class="detail-row"><span>Link</span><b id="loLink" style="overflow-wrap:anywhere;text-align:right"></b></div><div class="detail-row"><span>Quantity</span><b id="loQty"></b></div><div class="detail-row"><span>Charge</span><b id="loCharge"></b></div></div><p id="loError" class="hidden" style="color:var(--danger);font-weight:600;margin:14px 0 0"></p><div class="modal-actions"><button class="btn btn-outline" type="button" data-close-liveorder>Cancel</button><button class="btn btn-primary" type="button" id="loConfirm">Place real order</button></div></div></div>
   <div class="modal-backdrop hidden" id="withdrawModal" role="dialog" aria-modal="true" aria-labelledby="withdrawModalTitle"><form class="modal" id="withdrawForm"><div class="modal-head"><h2 id="withdrawModalTitle">Withdraw Earnings</h2><button class="icon-btn" type="button" data-close-withdraw aria-label="Close">×</button></div><div class="form-stack"><div class="field"><label for="wdMethod">Method</label><select class="input" id="wdMethod"><option>bKash</option><option>Nagad</option></select></div><div class="field"><label for="wdNumber">Mobile number</label><input class="input" id="wdNumber" inputmode="tel" placeholder="01XXXXXXXXX" required></div><div class="field"><label for="wdAmount">Amount (৳)</label><input class="input" id="wdAmount" type="number" min="10" step="1" value="475" required></div><p class="demo-note">Available to withdraw: ৳475 · Demo preview — no payout is processed.</p></div><div class="modal-actions"><button class="btn btn-outline" type="button" data-close-withdraw>Cancel</button><button class="btn btn-primary" type="submit">Request Withdrawal</button></div></form></div>
   <div class="toast-stack" id="toastStack" aria-live="polite"></div><div class="palette-backdrop hidden" id="palette" role="dialog" aria-modal="true" aria-label="Quick search"><div class="palette"><div class="palette-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3-3"/></svg><input id="paletteInput" type="text" placeholder="Search services and pages…" autocomplete="off" aria-label="Search services and pages"></div><div class="palette-list" id="paletteList"></div><div class="palette-foot"><span><kbd>↑</kbd> <kbd>↓</kbd> Navigate</span><span><kbd>Enter</kbd> Open</span><span><kbd>Esc</kbd> Close</span></div></div></div>
   <script>
     /* Currency: base USD, session-only choice, single rate constant */
-    window.USD_BDT_RATE=130;window.__cur='USD';
+    window.USD_BDT_RATE=130;window.__cur='USD';window.__up='USD';window.__balanceUp=0;window.__liveOn=false;
     window.fmtCalc=function(usd){if(window.__cur!=='BDT')return '$'+usd.toFixed(2);var b=usd*window.USD_BDT_RATE;return b>=100?'৳'+Math.round(b).toLocaleString('en-US'):'৳'+b.toFixed(2)};
-    window.convMoney=function(s){if(window.__cur!=='BDT'||typeof s!=='string')return s;var v=parseFloat(s.replace(/[^0-9.]/g,''));if(isNaN(v))return s;var b=v*window.USD_BDT_RATE;return b>=100?'৳'+Math.round(b).toLocaleString('en-US'):'৳'+b.toFixed(2)};
+    window.convMoney=function(s){if(typeof s!=='string')return s;if(s.indexOf('৳')>-1){if(window.__cur==='BDT')return s;var bv=parseFloat(s.replace(/[^0-9.]/g,''));if(isNaN(bv))return s;return '$'+(bv/window.USD_BDT_RATE).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})}if(window.__cur!=='BDT')return s;var v=parseFloat(s.replace(/[^0-9.]/g,''));if(isNaN(v))return s;var b=v*window.USD_BDT_RATE;return b>=100?'৳'+Math.round(b).toLocaleString('en-US'):'৳'+b.toFixed(2)};
   </script>
   <script>
     (function(){
@@ -639,8 +643,8 @@
       document.querySelectorAll('.faq-q').forEach(function(btn){btn.addEventListener('click',function(){btn.parentElement.classList.toggle('open')})});
       function wirePills(container){container.querySelectorAll('button').forEach(function(btn){btn.addEventListener('click',function(){container.querySelectorAll('button').forEach(function(b){b.classList.remove('active')});btn.classList.add('active')})})}
       document.querySelectorAll('.pills').forEach(wirePills);
-      var orderService=document.getElementById('orderService'),orderQty=document.getElementById('orderQty');function updateCharge(){var opt=orderService.options[orderService.selectedIndex],qty=Math.max(0,Number(orderQty.value)||0),rate=Number(opt.dataset.rate)||0;document.getElementById('orderCharge').textContent=fmtCalc(rate*qty/1000)}orderService.addEventListener('change',updateCharge);orderQty.addEventListener('input',updateCharge);
-      document.getElementById('orderForm').addEventListener('submit',function(e){e.preventDefault();showToast('Order placed — demo preview, nothing was submitted','success')});['massForm','ticketForm','childForm'].forEach(function(id){document.getElementById(id).addEventListener('submit',function(e){e.preventDefault();showToast('Demo preview only — nothing was submitted','info')})});
+      var orderService=document.getElementById('orderService'),orderQty=document.getElementById('orderQty');function updateCharge(){var opt=orderService.options[orderService.selectedIndex];if(!opt){document.getElementById('orderCharge').textContent=fmtCalc(0);return}var qty=Math.max(0,Number(orderQty.value)||0),rate=Number(opt.dataset.rate)||0;if(window.__liveOn&&opt.dataset.rateUp!==undefined){var ru=Number(opt.dataset.rateUp);if(!isNaN(ru))rate=window.__up==='BDT'?ru/window.USD_BDT_RATE:ru}document.getElementById('orderCharge').textContent=fmtCalc(rate*qty/1000)}orderService.addEventListener('change',updateCharge);orderQty.addEventListener('input',updateCharge);
+      document.getElementById('orderForm').addEventListener('submit',function(e){e.preventDefault();if(window.__liveOn){openLiveConfirm()}else{showToast('Order placed — demo preview, nothing was submitted','success')}});['massForm','ticketForm','childForm'].forEach(function(id){document.getElementById(id).addEventListener('submit',function(e){e.preventDefault();showToast('Demo preview only — nothing was submitted','info')})});
       var methodGrid=document.getElementById('methodGrid');methodGrid.querySelectorAll('.method').forEach(function(btn){btn.addEventListener('click',function(){methodGrid.querySelectorAll('.method').forEach(function(b){b.classList.remove('active')});btn.classList.add('active')})});
       var bonus=false,amount=20,custom=document.getElementById('customAmount'),total=document.getElementById('totalGet');function updateTotal(){amount=Math.max(0,Number(custom.value)||0);total.textContent=fmtCalc(amount*(bonus?1.02:1))}document.getElementById('bonusToggle').addEventListener('click',function(){bonus=!bonus;this.classList.toggle('on',bonus);updateTotal()});document.querySelectorAll('#amounts button').forEach(function(btn){btn.addEventListener('click',function(){document.querySelectorAll('#amounts button').forEach(function(b){b.classList.remove('active')});btn.classList.add('active');custom.value=btn.dataset.value;updateTotal()})});custom.addEventListener('input',updateTotal);document.getElementById('fundForm').addEventListener('submit',function(e){e.preventDefault();showToast('Funds added — demo preview, no payment was processed','success')});
       document.getElementById('serviceTableSearch').addEventListener('input',function(){var q=this.value.toLowerCase().trim();document.querySelectorAll('#serviceTables tbody tr').forEach(function(row){row.style.display=!q||row.dataset.search.indexOf(q)>-1?'':'none'})});
@@ -695,7 +699,7 @@
       var revealEls=document.querySelectorAll('#landingView .hero-inner,#landingView .section-head,#landingView .feature-grid,#landingView .step-grid,#landingView .review-grid,#landingView .landing-faq');
       if(!prefersReduced&&'IntersectionObserver' in window){var revealIO=new IntersectionObserver(function(entries){entries.forEach(function(en){if(!en.isIntersecting)return;var el=en.target;revealIO.unobserve(el);el.classList.add('reveal-enter');var cleanup=function(){el.classList.remove('reveal-enter');el.removeEventListener('animationend',cleanup)};el.addEventListener('animationend',cleanup);setTimeout(cleanup,700)})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});revealEls.forEach(function(el){revealIO.observe(el)})}
       var stepperEl=document.getElementById('orderStepper'),orderLinkEl=document.getElementById('orderLink'),serviceChosen=false;
-      function updateStepper(){if(!stepperEl)return;var linkOk=orderLinkEl.value.trim().length>=5,q=Number(orderQty.value)||0,qtyOk=q>=100&&q<=100000,current=!serviceChosen?1:!linkOk?2:!qtyOk?3:4;stepperEl.querySelectorAll('.stepper-step').forEach(function(li,i){var n=i+1;li.classList.toggle('done',n<current);li.classList.toggle('active',n===current);li.querySelector('.stepper-dot').textContent=n<current?'\u2713':String(n)})}
+      function updateStepper(){if(!stepperEl)return;var linkOk=orderLinkEl.value.trim().length>=5,q=Number(orderQty.value)||0,qtyOk=q>=(Number(orderQty.min)||100)&&q<=(Number(orderQty.max)||100000),current=!serviceChosen?1:!linkOk?2:!qtyOk?3:4;stepperEl.querySelectorAll('.stepper-step').forEach(function(li,i){var n=i+1;li.classList.toggle('done',n<current);li.classList.toggle('active',n===current);li.querySelector('.stepper-dot').textContent=n<current?'\u2713':String(n)})}
       orderService.addEventListener('change',function(){serviceChosen=true;updateStepper()});
       document.getElementById('orderCategory').addEventListener('change',function(){serviceChosen=true;updateStepper()});
       orderLinkEl.addEventListener('input',updateStepper);orderQty.addEventListener('input',updateStepper);updateStepper();
@@ -767,11 +771,11 @@
         'Payment method':'পেমেন্ট মাধ্যম','TOTAL YOU GET':'মোট পাবেন','Submit new ticket':'নতুন টিকিট জমা দিন','Submit Ticket':'টিকিট জমা দিন','Subject':'বিষয়','Message':'বার্তা','Type':'ধরন','Your referral link':'আপনার রেফারেল লিংক','Commission rate':'কমিশন রেট','Minimum payout':'সর্বনিম্ন পেআউট','Available earnings':'উপলব্ধ আয়','Copy':'কপি',
         'Invite friends and earn commission on every order they place.':'বন্ধুদের আমন্ত্রণ জানান এবং তাদের প্রতিটি অর্ডারে কমিশন আয় করুন।','Withdraw':'উইথড্র','Total Referrals':'মোট রেফারেল','Total Earnings':'মোট আয়','Commission Rate':'কমিশন রেট','Share your link':'আপনার লিংক শেয়ার করুন','Friends join & order':'বন্ধুরা যোগ দিয়ে অর্ডার করবে','Earn 5% commission':'৫% কমিশন আয় করুন','Earnings':'আয়সমূহ','Referral':'রেফারেল','Date joined':'যোগদানের তারিখ','Total spent':'মোট ব্যয়','Your commission':'আপনার কমিশন','Paid':'পরিশোধিত',
         'Order Details':'অর্ডারের বিস্তারিত','Close':'বন্ধ করুন','Confirm Refill':'রিফিল নিশ্চিত করুন','Request Refill':'রিফিল রিকোয়েস্ট','Cancel':'বাতিল','Withdraw Earnings':'আয় তুলুন','Method':'মাধ্যম','Mobile number':'মোবাইল নম্বর','Amount (৳)':'পরিমাণ (৳)','Request Withdrawal':'উইথড্র রিকোয়েস্ট',
-        'Upload photo':'ছবি আপলোড করুন','Remove photo':'ছবি সরান'
+        'Upload photo':'ছবি আপলোড করুন','Remove photo':'ছবি সরান','Confirm Order':'অর্ডার নিশ্চিত করুন','Place real order':'আসল অর্ডার করুন','This is a REAL order — your actual balance will be charged.':'এটি একটি আসল অর্ডার — আপনার আসল ব্যালেন্স থেকে টাকা কাটা হবে।'
       };
       var I18N_PH={'Search orders':'অর্ডার খুঁজুন','Search services':'সার্ভিস খুঁজুন','Search by name or ID':'নাম বা আইডি দিয়ে খুঁজুন','Search ID or service':'আইডি বা সার্ভিস খুঁজুন','Search order or customer':'অর্ডার বা কাস্টমার খুঁজুন','Search name, email or ID':'নাম, ইমেইল বা আইডি খুঁজুন'};
       var i18nNodes=[];
-      document.querySelectorAll('#landingView *,#dashboardView *,#adminView *,#orderModal *,#refillModal *,#withdrawModal *').forEach(function(el){
+      document.querySelectorAll('#landingView *,#dashboardView *,#adminView *,#orderModal *,#refillModal *,#withdrawModal *,#liveOrderModal *').forEach(function(el){
         if(el.closest('.code,#palette,#toastStack,#ordersBody,.ticket-count'))return;
         for(var i=0;i<el.childNodes.length;i++){var n=el.childNodes[i];if(n.nodeType===3){var key=n.nodeValue.trim();if(key&&I18N[key]){i18nNodes.push({node:n,en:n.nodeValue,key:key});break}}}
       });
@@ -789,8 +793,8 @@
       }
       document.querySelectorAll('.lang-opt').forEach(function(b){b.addEventListener('click',function(){if(b.dataset.lang!==currentLang){applyLang(b.dataset.lang);showToast(b.dataset.lang==='bn'?'ভাষা: বাংলা':'Language: English','info')}})});
 
-      var STATUS_META={progress:{badge:'info',fill:'st-progress'},completed:{badge:'success',fill:'st-completed'},partial:{badge:'warning',fill:'st-partial'},canceled:{badge:'danger',fill:'st-canceled'}};
-      var STATUS_LABEL={en:{progress:'In Progress',completed:'Completed',partial:'Partial',canceled:'Canceled'},bn:{progress:'চলমান',completed:'সম্পন্ন',partial:'আংশিক',canceled:'বাতিল'}};
+      var STATUS_META={pending:{badge:'warning',fill:'st-partial'},progress:{badge:'info',fill:'st-progress'},completed:{badge:'success',fill:'st-completed'},partial:{badge:'warning',fill:'st-partial'},canceled:{badge:'danger',fill:'st-canceled'}};
+      var STATUS_LABEL={en:{pending:'Pending',progress:'In Progress',completed:'Completed',partial:'Partial',canceled:'Canceled'},bn:{pending:'পেন্ডিং',progress:'চলমান',completed:'সম্পন্ন',partial:'আংশিক',canceled:'বাতিল'}};
       var TXT={en:{details:'Details',refill:'Refill',running:'Order is still running',refillProg:'Refill: In progress',refillDone:'Refill completed',refillRequested:'Refill requested'},bn:{details:'বিস্তারিত',refill:'রিফিল',running:'অর্ডার এখনো চলমান আছে',refillProg:'রিফিল: চলমান',refillDone:'রিফিল সম্পন্ন',refillRequested:'রিফিল রিকোয়েস্ট করা হয়েছে'}};
       function T(k){return TXT[currentLang][k]}
       var ordersData=[
@@ -859,19 +863,20 @@
       document.getElementById('odRefill').addEventListener('click',function(){var id=detailOrderId;closeOrderModal();if(id)openRefillModal(id)});
 
       var refillModal=document.getElementById('refillModal'),refillOrderId=null;
-      function openRefillModal(id){var o=findOrder(id);if(!o)return;if(!((o.status==='completed'||o.status==='partial')&&!o.refill))return;refillOrderId=id;document.getElementById('refillText').textContent='Request a refill for order #'+o.id+' — '+o.service+'?';refillModal.classList.remove('hidden')}
+      function openRefillModal(id){var o=findOrder(id);if(!o)return;if(!((o.status==='completed'||o.status==='partial')&&!o.refill))return;refillOrderId=id;document.getElementById('refillText').textContent='Request a refill for order #'+o.id+' — '+o.service+'?';var rn=document.getElementById('refillNote');if(rn)rn.textContent=o.live?(currentLang==='bn'?'আসল রিফিল রিকোয়েস্ট প্রোভাইডারের কাছে পাঠানো হবে।':'A real refill request will be sent to the provider.'):'The provider will re-run the undelivered part of this order. Demo preview — no real refill is sent.';refillModal.classList.remove('hidden')}
       function closeRefillModal(){refillModal.classList.add('hidden');refillOrderId=null}
       document.querySelectorAll('[data-close-refill]').forEach(function(b){b.addEventListener('click',closeRefillModal)});
       refillModal.addEventListener('click',function(e){if(e.target===refillModal)closeRefillModal()});
       document.getElementById('confirmRefill').addEventListener('click',function(){
         var o=findOrder(refillOrderId);closeRefillModal();if(!o)return;
+        if(o.live){o.refill='progress';refreshOrderRow(o);apiPost({action:'refill',order:o.id}).then(function(d){if(d&&!d.error){o.refill='done';refreshOrderRow(o);if(detailOrderId===o.id)fillOrderModal(o);showToast(d.refill?('Refill #'+d.refill+' · Order #'+o.id):(T('refillRequested')+' — #'+o.id),'success')}else{o.refill=null;refreshOrderRow(o);showToast(d&&d.error?String(d.error):'Refill failed','info')}}).catch(function(){o.refill=null;refreshOrderRow(o);showToast('Refill failed — network error','info')});return}
         o.refill='progress';refreshOrderRow(o);showToast(T('refillRequested')+' — #'+o.id,'success');
         setTimeout(function(){o.refill='done';refreshOrderRow(o);if(detailOrderId===o.id)fillOrderModal(o);showToast(T('refillDone')+' — #'+o.id,'success')},8000);
       });
 
       setInterval(function(){
         ordersData.forEach(function(o){
-          if(o.status==='progress'&&o.progress<100){
+          if(o.status==='progress'&&o.progress<100&&!o.live){
             o.progress=Math.min(100,o.progress+1+Math.floor(Math.random()*3));
             if(o.progress>=100){o.progress=100;o.status='completed'}
             refreshOrderRow(o);
@@ -888,7 +893,7 @@
       document.getElementById('withdrawForm').addEventListener('submit',function(e){e.preventDefault();withdrawModal.classList.add('hidden');showToast(currentLang==='bn'?'উইথড্র রিকোয়েস্ট পাঠানো হয়েছে — ডেমো প্রিভিউ':'Withdrawal requested — demo preview, no payout processed','success')});
       document.getElementById('copyRefLink').addEventListener('click',function(){var text=document.getElementById('refLinkInput').value;if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(function(){showToast('Link copied!')},function(){showToast('Copy is unavailable in this view','info')})}else showToast('Copy is unavailable in this view','info')});
       paletteItems.push({type:'Page',label:'Referrals',run:function(){openDashboard('referrals')}});
-      document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeOrderModal();closeRefillModal();withdrawModal.classList.add('hidden')}});
+      document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeOrderModal();closeRefillModal();closeLiveOrderModal();withdrawModal.classList.add('hidden')}});
 
       /* Sidebar profile avatar — random initials avatar per load, session-only photo upload */
       var avatarBtn=document.getElementById('avatarBtn'),avatarPop=document.getElementById('avatarPop'),avatarFace=document.getElementById('avatarFace'),avatarImg=document.getElementById('avatarImg'),avatarFile=document.getElementById('avatarFile'),avatarUploadBtn=document.getElementById('avatarUploadBtn'),avatarRemoveBtn=document.getElementById('avatarRemoveBtn'),avatarPhoto=null;
@@ -927,7 +932,7 @@
       }
       serviceBody.querySelectorAll('[data-service-row]').forEach(function(r){r.dataset.rateUsd=parseFloat(r.cells[4].textContent.replace(/[^0-9.]/g,''))||0});
       function applyCurrency(){
-        if(balancePill)balancePill.textContent=(currentLang==='bn'?'ব্যালেন্স: ':'Balance: ')+fmtCalc(0)+' ▾';
+        if(balancePill)balancePill.textContent=(currentLang==='bn'?'ব্যালেন্স: ':'Balance: ')+fmtCalc(window.__balanceUp||0)+' ▾';
         moneyRecs.forEach(function(r){r.node.nodeValue=r.parts.map(function(p){return typeof p==='string'?p:moneyToken(p)}).join('')});
         document.querySelectorAll('.line-icon').forEach(function(ic){var t=ic.textContent.trim();if(t==='$'||t==='৳')ic.textContent=window.__cur==='BDT'?'৳':'$'});
         updateCharge();updateTotal();renderOrders();
@@ -939,6 +944,177 @@
         document.querySelectorAll('.cur-opt').forEach(function(b){b.classList.toggle('active',b.dataset.cur===window.__cur)});
       }
       document.querySelectorAll('.cur-opt').forEach(function(b){b.addEventListener('click',function(){if(window.__cur!==b.dataset.cur){window.__cur=b.dataset.cur;applyCurrency();showToast(b.dataset.cur==='BDT'?'Currency: BDT (1 USD = ৳130)':'Currency: USD (1 USD = ৳130)','info')}})});
+
+      /* ——— LIVE mode: Booster SMM API via secure proxy (the API key lives server-side only; nothing secret on this page) ——— */
+      var API_BASE='https://rovexa-api-runner8.vercel.app/api/proxy';
+      var LIVE={on:false,trying:false,services:null,platform:'all',pollTimer:null};
+      var liveBadge=document.getElementById('liveBadge'),liveOrderModal=document.getElementById('liveOrderModal'),pendingLiveOrder=null;
+      function apiGet(action,params){var qs='?action='+encodeURIComponent(action);if(params){for(var k in params){qs+='&'+encodeURIComponent(k)+'='+encodeURIComponent(params[k])}}return fetch(API_BASE+qs).then(function(r){return r.json()})}
+      function apiPost(body){return fetch(API_BASE,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)}).then(function(r){return r.json()})}
+      function upToUsd(v){return window.__up==='BDT'?v/window.USD_BDT_RATE:v}
+      function upMoneyStr(raw){raw=Number(raw)||0;if(window.__up==='BDT'){return raw>=100?'৳'+Math.round(raw).toLocaleString('en-US'):'৳'+raw.toFixed(2)}return '$'+raw.toFixed(2)}
+      function escHtml(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
+      function liveTxt(en,bn){return currentLang==='bn'?bn:en}
+      function syncLiveChrome(){
+        var note=document.querySelector('#orderForm .demo-note');
+        if(note)note.textContent=liveTxt('Live mode — submitting places a real order and charges your balance.','লাইভ মোড — সাবমিট করলে আসল অর্ডার হবে এবং ব্যালেন্স থেকে টাকা কাটবে।');
+        var headP=document.querySelector('#orderForm .card-head p');
+        if(headP)headP.textContent=liveTxt('Live rates from the provider.','প্রোভাইডারের লাইভ রেট।');
+      }
+      function refreshBalance(){apiGet('balance').then(function(d){if(d&&!d.error&&d.balance!==undefined&&d.balance!==null){var cur=String(d.currency||window.__up).toUpperCase();window.__up=cur==='BDT'?'BDT':'USD';window.__balanceUp=upToUsd(parseFloat(d.balance)||0);applyCurrency()}}).catch(function(){})}
+      function initLive(){
+        if(LIVE.trying)return;
+        if(LIVE.on){refreshBalance();startLivePolling();return}
+        LIVE.trying=true;
+        apiGet('balance').then(function(d){
+          if(!d||d.error||d.balance===undefined||d.balance===null)throw new Error('balance unavailable');
+          var cur=String(d.currency||'USD').toUpperCase();window.__up=cur==='BDT'?'BDT':'USD';
+          window.__balanceUp=upToUsd(parseFloat(d.balance)||0);
+          LIVE.on=true;window.__liveOn=true;
+          if(liveBadge)liveBadge.classList.remove('hidden');
+          ordersData.length=0;renderOrders();syncLiveChrome();
+          applyCurrency();
+          showToast(liveTxt('Live mode — connected to your real balance','লাইভ মোড — আসল ব্যালেন্সের সাথে সংযুক্ত'),'success');
+          return apiGet('services').then(function(list){
+            var arr=Array.isArray(list)?list:(list&&Array.isArray(list.services)?list.services:null);
+            if(arr)setLiveServices(arr);
+          }).catch(function(){});
+        }).catch(function(){/* proxy not ready — the site keeps running in demo mode, unchanged */}).then(function(){LIVE.trying=false});
+      }
+      function setLiveServices(list){
+        LIVE.services=[];
+        list.forEach(function(s){if(!s)return;var id=s.service!==undefined?s.service:s.id;if(id===undefined||id===null||id==='')return;LIVE.services.push({id:String(id),name:String(s.name||('Service '+id)),category:String(s.category||'Other'),rate:parseFloat(s.rate)||0,min:parseInt(s.min,10)||0,max:parseInt(s.max,10)||0})});
+        buildLiveCategories();renderLiveServiceTables();renderLiveOrderOptions();
+      }
+      function liveHay(s){return (s.category+' '+s.name).toLowerCase()}
+      var PLATFORM_KEYS=['facebook','instagram','telegram','tiktok','youtube','twitch','linkedin','twitter','whatsapp','spotify'];
+      function livePlatformMatch(s){
+        if(LIVE.platform==='all')return true;
+        var hay=liveHay(s);
+        if(LIVE.platform==='other'){for(var i=0;i<PLATFORM_KEYS.length;i++){if(hay.indexOf(PLATFORM_KEYS[i])>-1)return false}return true}
+        return hay.indexOf(LIVE.platform)>-1;
+      }
+      function buildLiveCategories(){
+        var sel=document.getElementById('orderCategory'),seen={},cats=[];
+        LIVE.services.forEach(function(s){if(!seen[s.category]){seen[s.category]=1;cats.push(s.category)}});
+        var cur=sel.value,html='<option value="">'+liveTxt('All categories','সব ক্যাটাগরি')+'</option>';
+        cats.forEach(function(c){html+='<option value="'+escHtml(c)+'">'+escHtml(c)+'</option>'});
+        sel.innerHTML=html;
+        if(cur&&seen[cur])sel.value=cur;
+      }
+      function syncQtyLimits(){var so=orderService.options[orderService.selectedIndex];if(so){orderQty.min=so.dataset.min||100;orderQty.max=so.dataset.max||100000}}
+      function renderLiveOrderOptions(){
+        if(!LIVE.services)return;
+        var sel=orderService,prev=sel.value,cat=document.getElementById('orderCategory').value,q=(document.getElementById('serviceSearch').value||'').toLowerCase().trim(),html='',count=0;
+        for(var i=0;i<LIVE.services.length&&count<1000;i++){
+          var s=LIVE.services[i];
+          if(!livePlatformMatch(s))continue;
+          if(cat&&s.category!==cat)continue;
+          if(q&&(s.id+' '+s.name).toLowerCase().indexOf(q)===-1)continue;
+          html+='<option value="'+escHtml(s.id)+'" data-rate="'+upToUsd(s.rate)+'" data-rate-up="'+s.rate+'" data-min="'+s.min+'" data-max="'+s.max+'">'+escHtml(s.id)+' — '+escHtml(s.name)+'</option>';count++;
+        }
+        sel.innerHTML=html;
+        if(prev){for(var j=0;j<sel.options.length;j++){if(sel.options[j].value===prev){sel.selectedIndex=j;break}}}
+        serviceChosen=sel.options.length>0;
+        syncQtyLimits();updateCharge();updateStepper();
+      }
+      function renderLiveServiceTables(){
+        if(!LIVE.services)return;
+        var wrap=document.getElementById('serviceTables'),q=document.getElementById('serviceTableSearch').value.toLowerCase().trim(),groups={},order=[],shown=0;
+        LIVE.services.forEach(function(s){
+          if(shown>=300)return;
+          if(q&&(liveHay(s)+' '+s.id).indexOf(q)===-1)return;
+          if(!groups[s.category]){groups[s.category]=[];order.push(s.category)}
+          groups[s.category].push(s);shown++;
+        });
+        var svcLbl=currentLang==='bn'?'সার্ভিস':'Service',html='';
+        order.forEach(function(cat){
+          html+='<div class="service-group"><div class="service-group-title">'+escHtml(cat)+'</div><div class="table-wrap" style="border-radius:0 0 12px 12px"><table><thead><tr><th>ID</th><th>'+svcLbl+'</th><th>Rate per 1000</th><th>Min / Max order</th><th>Average time</th></tr></thead><tbody>';
+          groups[cat].forEach(function(s){
+            html+='<tr data-search="'+escHtml(liveHay(s)+' '+s.id)+'"><td data-label="ID">'+escHtml(s.id)+'</td><td data-label="Service">'+escHtml(s.name)+'</td><td data-label="Rate per 1000">'+fmtCalc(upToUsd(s.rate))+'</td><td data-label="Min / Max">'+s.min.toLocaleString('en-US')+' / '+s.max.toLocaleString('en-US')+'</td><td data-label="Average time">—</td></tr>';
+          });
+          html+='</tbody></table></div></div>';
+        });
+        wrap.innerHTML=html||'<div class="empty-state"><h3>'+liveTxt('No services found','কোনো সার্ভিস পাওয়া যায়নি')+'</h3><p>'+liveTxt('Try a different search.','অন্য কিছু লিখে খুঁজুন।')+'</p></div>';
+      }
+      document.querySelectorAll('#platformPills .pill').forEach(function(p){p.addEventListener('click',function(){LIVE.platform=p.dataset.brand||'all';if(LIVE.services)renderLiveOrderOptions()})});
+      document.getElementById('orderCategory').addEventListener('change',function(){if(LIVE.services)renderLiveOrderOptions()});
+      document.getElementById('serviceSearch').addEventListener('input',function(){if(LIVE.services)renderLiveOrderOptions()});
+      document.getElementById('serviceTableSearch').addEventListener('input',function(){if(LIVE.services)renderLiveServiceTables()});
+      orderService.addEventListener('change',function(){if(LIVE.services)syncQtyLimits()});
+      document.querySelectorAll('.cur-opt').forEach(function(b){b.addEventListener('click',function(){if(LIVE.services){renderLiveServiceTables();renderLiveOrderOptions()}})});
+      document.querySelectorAll('.lang-opt').forEach(function(b){b.addEventListener('click',function(){if(LIVE.on){syncLiveChrome();if(LIVE.services)renderLiveServiceTables()}})});
+
+      function openLiveConfirm(){
+        var opt=orderService.options[orderService.selectedIndex];
+        if(!opt){showToast(liveTxt('No service selected','কোনো সার্ভিস বেছে নেওয়া হয়নি'),'info');return}
+        var svc=null;
+        if(LIVE.services){for(var i=0;i<LIVE.services.length;i++){if(LIVE.services[i].id===opt.value){svc=LIVE.services[i];break}}}
+        var rateUp=opt.dataset.rateUp!==undefined?Number(opt.dataset.rateUp):(svc?svc.rate:0);
+        var min=svc?svc.min:(Number(opt.dataset.min)||0),max=svc?svc.max:(Number(opt.dataset.max)||0);
+        var link=orderLinkEl.value.trim(),qty=Math.floor(Number(orderQty.value)||0);
+        if(link.length<5){showToast(liveTxt('Please enter a valid link','সঠিক লিংক দিন'),'info');orderLinkEl.focus();return}
+        if(!qty||(min&&qty<min)||(max&&qty>max)){showToast(liveTxt('Quantity must be between '+min.toLocaleString('en-US')+' and '+max.toLocaleString('en-US'),'পরিমাণ '+min.toLocaleString('en-US')+' থেকে '+max.toLocaleString('en-US')+' এর মধ্যে হতে হবে'),'info');orderQty.focus();return}
+        pendingLiveOrder={serviceId:opt.value,name:svc?svc.name:opt.textContent,link:link,qty:qty,chargeUp:rateUp*qty/1000};
+        document.getElementById('loService').textContent=pendingLiveOrder.serviceId+' — '+pendingLiveOrder.name;
+        document.getElementById('loLink').textContent=link;
+        document.getElementById('loQty').textContent=qty.toLocaleString('en-US');
+        document.getElementById('loCharge').textContent=fmtCalc(upToUsd(pendingLiveOrder.chargeUp));
+        var err=document.getElementById('loError');err.classList.add('hidden');err.textContent='';
+        var btn=document.getElementById('loConfirm');btn.disabled=false;btn.textContent=liveTxt('Place real order','আসল অর্ডার করুন');
+        liveOrderModal.classList.remove('hidden');
+      }
+      function closeLiveOrderModal(){if(liveOrderModal)liveOrderModal.classList.add('hidden')}
+      document.querySelectorAll('[data-close-liveorder]').forEach(function(b){b.addEventListener('click',closeLiveOrderModal)});
+      liveOrderModal.addEventListener('click',function(e){if(e.target===liveOrderModal)closeLiveOrderModal()});
+      document.getElementById('loConfirm').addEventListener('click',function(){
+        if(!pendingLiveOrder)return;
+        var btn=this,po=pendingLiveOrder;
+        btn.disabled=true;btn.textContent=liveTxt('Placing…','অর্ডার হচ্ছে…');
+        apiPost({action:'add',service:po.serviceId,link:po.link,quantity:po.qty}).then(function(d){
+          btn.disabled=false;btn.textContent=liveTxt('Place real order','আসল অর্ডার করুন');
+          if(d&&!d.error&&d.order!==undefined&&d.order!==null){
+            closeLiveOrderModal();
+            var today=new Date().toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+            ordersData.unshift({id:d.order,date:today,link:po.link,charge:upMoneyStr(po.chargeUp),service:po.name,qty:po.qty,start:0,progress:0,status:'pending',refill:null,live:true});
+            renderOrders();startLivePolling();
+            showToast(liveTxt('Order placed — #','অর্ডার হয়েছে — #')+d.order,'success');
+            refreshBalance();navigate('orders');
+          }else{
+            var err=document.getElementById('loError');err.textContent=(d&&d.error)?String(d.error):liveTxt('Order failed — please try again','অর্ডার ব্যর্থ হয়েছে — আবার চেষ্টা করুন');err.classList.remove('hidden');
+          }
+        }).catch(function(){
+          btn.disabled=false;btn.textContent=liveTxt('Place real order','আসল অর্ডার করুন');
+          var err=document.getElementById('loError');err.textContent=liveTxt('Network error — the order was not placed','নেটওয়ার্ক সমস্যা — অর্ডার হয়নি');err.classList.remove('hidden');
+        });
+      });
+
+      function mapLiveStatus(s){
+        var t=String(s||'').toLowerCase();
+        if(t.indexOf('complet')>-1)return 'completed';
+        if(t.indexOf('partial')>-1)return 'partial';
+        if(t.indexOf('cancel')>-1||t.indexOf('refund')>-1)return 'canceled';
+        if(t.indexOf('pending')>-1)return 'pending';
+        return 'progress';
+      }
+      function pollLiveOrders(){
+        ordersData.forEach(function(o){
+          if(!o.live||o.status==='completed'||o.status==='canceled')return;
+          apiGet('status',{order:o.id}).then(function(d){
+            if(!d||d.error)return;
+            if(d.start_count!==undefined&&d.start_count!==null)o.start=parseInt(d.start_count,10)||0;
+            var q=parseInt(d.quantity,10);if(q>0)o.qty=q;
+            if(d.remains!==undefined&&d.remains!==null){var rem=parseInt(d.remains,10)||0;o.progress=o.qty>0?Math.max(0,Math.min(100,Math.round((o.qty-rem)/o.qty*100))):0}
+            if(d.status)o.status=mapLiveStatus(d.status);
+            if(d.charge!==undefined&&d.charge!==null&&d.charge!=='')o.charge=upMoneyStr(parseFloat(d.charge)||0);
+            refreshOrderRow(o);if(detailOrderId===o.id)fillOrderModal(o);
+          }).catch(function(){});
+        });
+      }
+      function startLivePolling(){if(LIVE.pollTimer)return;LIVE.pollTimer=setInterval(pollLiveOrders,15000)}
+      var openDashboardBase=openDashboard;
+      openDashboard=function(page){openDashboardBase(page);initLive()};
+
       applyCurrency();
     }());
   </script>
